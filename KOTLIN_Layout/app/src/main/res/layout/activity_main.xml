@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center_vertical"
+    tools:context=".MainActivity">
+
+    <!-- ContraitsLayout   daha geniş bir kullanımı var. -->
+    <!-- LinearLayout  dikey ve yatay sıralama için kullanılıyor. -->
+    <!-- linearLayout dikey ve yatay sıralama için orientation
+         horizontal ve vertical kullanıyoruz.
+         Önemli resim,text,button sırasına göre ekrana gelir
+         sıra önemlidir-->
+
+    <ImageView
+        android:id="@+id/ıstanbul_ımage"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        app:srcCompat="@drawable/istanbul" />
+
+    <!-- layout_gravity elementleri "center" ortalamak için kullandık.  -->
+    <TextView
+        android:id="@+id/alt_yazı"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:text="gel beni al"
+        android:textAlignment="center"
+        android:textColor="#9C27B0"
+        android:textSize="29sp" />
+
+    <!-- layout_gravity ,gravity farkları var button ortalamak için
+      gravity kullandık. Bunları LinearLayout içindek kullandık.-->
+
+    <!-- bug oluştugu zaman file-invalidate cashes projeyi tekrar başlat.-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        >
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:onClick="SAVE"
+            android:text="tıkla" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:onClick="EXIT"
+            android:text="iptal" />
+
+    </LinearLayout>
+
+
+
+
+    <!-- FrameLayout ekranı tamamlen kaplar ve ekranın
+    arkasına kaplayarak koymak istediğiniz resim için kullanılır.-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
+
+
+    <!-- RealativeLayout ise  ConstraintsLayout ile LinearLayout arasında
+    kalır.  Üstüne yanına gibi dizebiliyoruz ama ConstraintsLayout çıkınca
+    pek kullanılmıyor.-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </RelativeLayout>
+
+
+    <!-- GridLayout ızgara görünümleri için yapılır.-->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </GridLayout>
+
+
+
+</LinearLayout>
+
